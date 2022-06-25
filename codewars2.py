@@ -3,7 +3,8 @@
 text = input("enter text")
 duplicate_count = 0
 duplicates = ""
-for char in text.casefold():
+# Please use lower function, because it uses less memory
+for char in text.lower():
     if text.casefold().count(char) > 1:
         if char not in duplicates:
             duplicates += char
