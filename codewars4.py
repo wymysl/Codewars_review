@@ -3,12 +3,14 @@
 # def get_count(sentence):
 #     pass
 
+vowels = ["a", "e", "i", "o", "u"]
+
 vowels_count = 0
 
 sentence = input("Please write something: ")
 
 for char in sentence:
-    if char.casefold() == "a" or char.casefold() == "e" or char.casefold() == "i" or char.casefold() == "o" or char.casefold() == "u":
+    if char.casefold() in vowels:
         vowels_count += 1
 
 print(vowels_count)
