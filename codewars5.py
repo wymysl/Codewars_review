@@ -4,8 +4,9 @@
 
 def tower_builder(n_floors):
     count = 1
-
+    christmas_tree = []
     for i in range (n_floors):
-        print("{:^{max_width}}".format("*" * count, max_width = ((n_floors * 2) - 1)))
+        christmas_tree.append("{:^{max_width}}".format("*" * count, max_width = ((n_floors * 2) - 1)))
         count += 2
+    return christmas_tree
 
