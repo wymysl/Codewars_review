@@ -10,7 +10,7 @@ while True:
     choice = int(input())
     if choice != 0:
         if choice <= int(len(beverages)):
-            print("Alright, {} coming right up.\nAnything else?".format(beverages[choice -1 ]))
+            print("Alright, {} coming right up.\nAnything else?".format(beverages[choice - 1]))
         else:
             print("Sorry, I don't think we have that.\nAnything else?")
 
