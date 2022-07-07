@@ -33,4 +33,4 @@ def sum_groups(arr):
     return len(arr)
 
 
-print(sum_groups([2, 1, 2, 2, 6, 5, 0, 2, 0, 5, 5, 7, 7, 4, 3, 3, 9]))
+print(sum_groups([2, 1, 2, 2, 6, 5, 0, 2, 0, 3, 3, 3, 9, 2]))
