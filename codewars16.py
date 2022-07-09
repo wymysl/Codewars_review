@@ -3,16 +3,18 @@
 def arrange(s):
     if s:
         t = []
-        u = s.copy()
+        count = 0
         while len(t) < len(s):
-            if len(u) == 1:
-                t.append(u[0])
-                break
-            t.append(u[0])
-            t.append(u[-1])
-            u.reverse()
-            u.pop(0)
-            u.pop(-1)
+            if count % 2 == 0:
+                t.append(s[count])
+                if (count < (len(s) // 2)):
+                    t.append(s[-(count + 1)])
+                    count += 1
+            else:
+                     t.append(s[-(count + 1)])
+                     if (count < (len(s) // 2)):
+                         t.append(s[count])
+                         count += 1
     else:
         return []
 
