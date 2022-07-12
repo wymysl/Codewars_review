@@ -1,7 +1,7 @@
 # https://www.codewars.com/kata/52742f58faf5485cae000b9a/train/python
 
 def format_duration(seconds):
-    years_total = seconds // 60 // 60 // 24 // 365
+    years_total = (seconds // 60 // 60 // 24 // 365)
     days = (seconds // 60 // 60 // 24) % 365
     hours = (seconds // 60 // 60) % 24
     minutes = (seconds // 60) % 60
