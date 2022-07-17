@@ -1,36 +1,23 @@
 # https://www.codewars.com/kata/58b3c2bd917a5caec0000017/train/python
-# works locally, but codewars returns error:/
-# not all arguments converted during string formatting (line 17 I think)
+# I understand now that:
+# for now it only sums TWO neighboring ints in a list that are both even or both odd.
 
 def sum_groups(arr):
-    arr.append("hehe")
-    batman = True
-    while batman:
-        init_len = str(len(arr))
+    while True:
+        init = len(arr)
         for index, x in enumerate(arr):
-            if arr[index] % 2 == 0:
-                if arr[index + 1] != "hehe":
-                    if arr[index + 1] % 2 != 0:
-                        continue
-                    else:
-                        while arr[index + 1] % 2 == 0:
-                            arr[index] += arr[index + 1]
-                            arr.pop(index + 1)
-                else:
-                    break
-            else:
-                if arr[index + 1] != "hehe":
-                    while arr[index + 1] % 2 != 0:
+            if index < len(arr) - 1:
+                if arr[index] % 2 == 0 and arr[index + 1] % 2 == 0 or arr[index] % 2 != 0 and arr[index + 1] % 2 != 0:
                         arr[index] += arr[index + 1]
-                        arr.pop(index + 1)
-                        break
-                else:
-                    break
-        final_len = str(len(arr))
-        if init_len == final_len:
-            batman = False
-            arr.pop(-1)
-    return len(arr)
+                        del arr[index + 1]
+            elif index == len(arr):
+                if arr[index - 1] % 2 == 0 and arr[index] == 0 or arr[index - 1] % 2 != 0 and arr[index] != 0:
+                    arr[index - 1] += arr[index]
+                    del arr[index]
+        end = len(arr)
+        if init == end:
+            break
 
+    return len(arr), arr
 
-print(sum_groups([2, 1, 2, 2, 6, 5, 0, 2, 0, 3, 3, 3, 9, 2]))
+print(sum_groups([77, 173, 115, 172, 235, 605, 635, 28, 202, 619, 881, 320, 382, 964, 361, 798, 558, 298, 907, 131, 47, 199, 9, 335, 480, 32, 123, 182, 697, 957, 294, 98, 649, 238, 251, 770, 169, 172, 923, 413]))
