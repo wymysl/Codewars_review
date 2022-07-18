@@ -2,6 +2,7 @@
 # I gave up and used groupby.
 
 from itertools import groupby
+
 def sum_groups(arr):
     while True:
         start = len(arr)
