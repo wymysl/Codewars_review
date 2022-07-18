@@ -1,8 +1,8 @@
 # https://www.codewars.com/kata/58b3c2bd917a5caec0000017/train/python
 # I gave up and used groupby.
 
+from itertools import groupby
 def sum_groups(arr):
-    from itertools import groupby
     while True:
         start = len(arr)
         arr = [sum((list(g))) for k, g in groupby(arr, lambda x: x % 2 == 0)]
