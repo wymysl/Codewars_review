@@ -1,4 +1,4 @@
-# https://www.codewars.com/kata/53f40dff5f9d31b813000774/train/python
+# https://www.codewars.com/kata/52449b062fb80683ec000024
 
 def generate_hashtag(s):
     if s == "" or len(s) >= 141:
