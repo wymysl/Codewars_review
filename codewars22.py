@@ -4,15 +4,14 @@ def generate_hashtag(s):
     if s == "" or len(s) >= 141:
         return False
     else:
-        s_list = []
+        hash_string = "#"
         start = 0
         for index, char in enumerate(s):
             if char == " ":
-                s_list.append(s[start:index])
+                hash_string += s[start:index].capitalize()
                 start = index + 1
-    s_list.append(s[start:])
-    s_list = [word.title() for word in s_list]
-    return "#" + "".join(s_list)
+    hash_string += s[start:].capitalize()
+    return hash_string
 
 
 print(generate_hashtag("Cześć witam serdecznie elko"))
