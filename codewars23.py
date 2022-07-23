@@ -6,16 +6,13 @@ def zeros(n):
     else:
         five_power = 0
     x = n // 5
+    y = 0
     while True:  # this loop finds the highest power of 5 in range 1 to n.
         # I know there must be an easier way to do this.
         if x // 5 >= 1:
             five_power += 1
             x = x // 5
-        else:
-            break
-    y = 0
-    while True:
-        if five_power >= 2:
+        elif five_power >= 2:
             y += n // 5 ** five_power
             five_power -= 1
         else:
